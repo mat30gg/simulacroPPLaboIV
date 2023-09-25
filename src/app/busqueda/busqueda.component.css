@@ -1,0 +1,12 @@
+
+.contenedor-tabla{
+    width: 100%;
+    padding: 9px 10% 0px;
+    background-color: hsl(234, 60%, 95%);
+    /* background-color:  */
+}
+
+.contenedor-controles{
+    padding: 0px 13%;
+    margin-top: 3%;
+}

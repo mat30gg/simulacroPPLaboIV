@@ -1,0 +1,40 @@
+
+
+<body>
+
+    <button class="btn btn-primary" (click)="cambiarVista()" type="button">Cambiar vista</button>
+        <div *ngIf="this.exhibicionListado; else exhibicionGrilla">
+            <div class="contenedor-listado" >
+                <table class="table table-bordered table-sm table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Fecha de estreno</th>
+                            <th scope="col" class="fit">Borrar</th>
+                        </tr>
+                    </thead>
+                    <tbody *ngFor="let pelicula of this.listaPeliculas">
+                        <tr (click)="seleccionarPelicula( pelicula )">
+                            <th scope="row">{{pelicula.id}}</th>
+                            <td>{{pelicula.nombre}}</td>
+                            <td>{{pelicula.fechaEstreno}}</td>
+                            <td><button type="button" class="btn btn-danger"><img src="../../assets/x-mark.png" width="18px"></button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <ng-template #exhibicionGrilla>
+            <div class="row row-cols-md-4 gx-2 gy-3">
+            <div class="col" *ngFor="let pelicula of this.listaPeliculas">
+                <div class="card" >
+                    <img class="card-img-top" src="{{pelicula.foto}}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{pelicula.nombre}}</h5>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </ng-template>
+</body>

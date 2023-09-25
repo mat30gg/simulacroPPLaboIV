@@ -1,0 +1,12 @@
+<body>
+    <div class="contenedor-tabla">
+        <app-tabla-pelicula 
+        (peliculaSeleccionadaEvent)="seleccionDePelicula($event)"
+        ></app-tabla-pelicula>
+    </div>
+    <div class="contenedor-controles">
+        <app-detalle-pelicula 
+        [peliculaSeleccionada]="this.peliculaSeleccionada" 
+        *ngIf="this.peliculaSeleccionada != null"></app-detalle-pelicula>
+    </div>
+</body>
