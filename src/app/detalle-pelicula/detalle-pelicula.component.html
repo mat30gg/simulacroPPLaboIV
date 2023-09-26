@@ -1,0 +1,12 @@
+<div *ngIf="this.peliculaSeleccionada != '{}'; else noHaySeleccion" class="d-block">
+  <h4>{{ this.getObject().nombre }}</h4>
+  <h5>{{ this.getObject().fechaEstreno }}</h5>
+  <p>Cantidad de publico {{ this.getObject().cantPublico }}</p>
+  <img src="{{ this.getObject().foto }}" width="200px" /><br />
+  <button type="button" class="btn btn-sm btn-secondary">
+    Limpiar
+  </button>
+</div>
+<ng-template #noHaySeleccion>
+  <p>Seleccione una pelicula para ver su informacion</p>
+</ng-template>

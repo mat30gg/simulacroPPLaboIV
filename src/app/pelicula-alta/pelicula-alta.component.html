@@ -1,0 +1,25 @@
+<label>
+    Nombre 
+    <input type="text" [(ngModel)]="this.nombrePelicula">
+</label>
+<label>
+    Tipo 
+    <ul>
+        <li><input type="radio" name="tipo" [checked]="" [(ngModel)]="this.tipoSeleccionado" value="terror">Terror</li>
+        <li><input type="radio" name="tipo" [(ngModel)]="this.tipoSeleccionado" value="comedia">Comedia</li>
+        <li><input type="radio" name="tipo" [(ngModel)]="this.tipoSeleccionado" value="amor">Amor</li>
+        <li><input type="radio" name="tipo" [(ngModel)]="this.tipoSeleccionado" value="otros">Otros</li>
+    </ul>
+</label>
+<label>
+    Fecha de estreno
+    <input type="date">
+</label>
+<label>
+    Cantidad de publico
+    <input type="number">
+</label>
+<label>
+    Imagen de la pelicula
+    <input type="file">
+</label>
